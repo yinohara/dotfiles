@@ -1,0 +1,120 @@
+# dein.toml
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# Color
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+source ~/.config/nvim/plugins/iceberg.rc.vim
+'''
+
+#[[plugins]]
+#repo = 'Shougo/vimproc.vim'
+#hook_post_update = '''
+#  if dein#util#_is_windows()
+#    let cmd = 'tools\\update-dll-mingw'
+#  elseif dein#util#_is_cygwin()
+#    let cmd = 'make -f make_cygwin.mak'
+#  elseif executable('gmake')
+#    let cmd = 'gmake'
+#  else
+#    let cmd = 'make'
+#  endif
+#  let g:dein#plugin.build = cmd
+#'''
+
+# linter
+# aleを導入予定
+
+# Git
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-fugitive.rc.vim
+'''
+
+# Status line
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-airline.rc.vim
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+source ~/.config/nvim/plugins/denite.rc.vim
+'''
+
+# Denite で使用するmatcher
+[[plugins]]
+repo = 'nixprime/cpsm'
+build = 'env PY3=ON ./install.sh'
+
+[[plugins]]
+repo = 'preservim/nerdcommenter'
+hook_add = '''
+source ~/.config/nvim/plugins/nerdcommenter.rc.vim
+'''
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-surround.rc.vim
+'''
+
+# terminal
+#[[plugins]]
+#repo = 'Shougo/deol.nvim'
+#hook_add = '''
+#source ~/.config/nvim/plugins/deol.rc.vim
+#'''
+
+[[plugins]]
+repo = 'kassio/neoterm'
+hook_add = '''
+source ~/.config/nvim/plugins/neoterm.rc.vim
+'''
+
+#[[plugins]]
+#repo = 'thinca/vim-quickrun'
+
+# used to normalize the jobs api between Vim 8 and Neovim
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+# Language Server
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+source ~/.config/nvim/plugins/vim-lsp.rc.vim
+'''
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo = 'liuchengxu/vista.vim'
+depends_on = ['vim-lsp', 'vim-airline']
+hook_add = '''
+source ~/.config/nvim/plugins/vista.rc.vim
+'''
+
+#[[plugins]]
+#repo = 'junegunn/fzf'
+#build = './install --bin'
+#
+#[[plugins]]
+#repo = 'junegunn/fzf.vim'

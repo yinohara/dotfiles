@@ -1,0 +1,57 @@
+# deinlazy.toml
+
+# Context filetype library for Vim script
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+# Change filetype by current cursor location
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = 'context_filetype.vim'
+on_ft = ['vim', 'html', 'toml']
+
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#depends = 'context_filetype.vim'
+#if = "has('nvim')"
+#on_i = 1
+#hook_source = '''
+#source ~/.config/nvim/plugins/deoplete.rc.vim
+#'''
+
+# completing words in English
+#[[plugins]]
+#repo = 'ujihisa/neco-look'
+#on_source = ['deoplete.nvim']
+
+# lang
+
+[[plugins]]
+repo = 'mattn/vim-goimports'
+on_ft = 'go'
+
+#[[plugins]]
+#repo = 'Shougo/neco-vim'
+#on_ft = 'vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = 'css'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_i = 1
+hook_source = '''
+source ~/.config/nvim/plugins/emmet-vim.rc.vim
+'''
+
+#[[plugins]]
+#repo = 'posva/vim-vue'
+#on_ft = 'vue'
+#hook_source = '''
+#source ~/.config/nvim/plugins/vim-vue.rc.vim
+#'''
