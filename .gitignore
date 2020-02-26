@@ -1,4 +1,5 @@
 .config/gcloud/
+.config/configstore/
 .zsh/.zplug
 .zsh/.zcompdump
 .zsh/.zsh_history
