@@ -81,6 +81,10 @@ eval "$(goenv init -)"
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
+# Direnv
+export EDITOR=vim
+eval "$(direnv hook zsh)"
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/yinhr/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yinhr/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
